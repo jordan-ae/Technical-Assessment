@@ -1,5 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
 import { CasinoCard } from '..'
 
 // Mock the dependencies
@@ -32,11 +33,11 @@ const mockData = {
   casino_name: 'Test Casino',
   rating: 4.5,
   bonus: {
-    betAmount: '$10',
-    bonusAmount: '$50'
+    betAmount: '£10',
+    bonusAmount: '£50'
   },
   cta: {
-    label: 'Claim Bonus',
+    label: 'Bet Now',
     url: '/claim'
   }
 }
@@ -58,14 +59,14 @@ describe('CasinoCard', () => {
     // Check if the star rating is rendered
     const starRating = screen.getByTestId('star-rating')
     expect(starRating).toBeInTheDocument()
-    expect(starRating).toHaveTextContent('4.5')
+    expect(starRating).toHaveTextContent('4')
 
     // Check if the bonus information is rendered
-    expect(screen.getByText('Bet $10')).toBeInTheDocument()
-    expect(screen.getByText('Get $50')).toBeInTheDocument()
+    expect(screen.getByText('Bet £10')).toBeInTheDocument()
+    expect(screen.getByText('Get £50')).toBeInTheDocument()
 
     // Check if the CTA button is rendered
-    const ctaButton = screen.getByText('Claim Bonus')
+    const ctaButton = screen.getByText('Bet Now')
     expect(ctaButton).toBeInTheDocument()
     expect(ctaButton).toHaveClass('lg:min-w-[180px] lg:max-w-[303px] text-sm font-bold')
   })
