@@ -54,7 +54,6 @@ export default function Home() {
       {casinoCardData.map((data, index) => (
         <CasinoCard key={index} data={data} />
       ))}
-      
     </div>
   );
 }
