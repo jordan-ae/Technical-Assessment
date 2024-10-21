@@ -8,6 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        button: {
+          primary: {
+            DEFAULT: '#009129',
+            hover: '#056A21',
+          }
+        },
+      },
+      textColor: {
+        primary: {
+          titles: '#939393',
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

@@ -47,13 +47,17 @@ const casinoCardData: CasinoCard[] = [
 
 export default function Home() {
   return (
-    <div className="p-6 lg:p-10 w-full min-h-screen flex flex-col items-center">
-      <span className="">
-        BEST CASINOS 2024
-      </span>
-      {casinoCardData.map((data, index) => (
-        <CasinoCard key={index} data={data} />
-      ))}
-    </div>
+    <main className="p-6 lg:p-10 min-h-screen flex flex-col items-start">
+        <h1 className="text-2xl font-bold text-primary-titles mb-3">
+          BEST CASINOS 2024
+        </h1>
+        <section aria-label="Casino List" className="w-full">
+          {casinoCardData.map((data, index) => (
+            <article key={index}>
+              <CasinoCard data={data} />
+            </article>
+          ))}
+        </section>
+    </main>
   );
 }
