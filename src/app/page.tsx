@@ -1,4 +1,4 @@
-import { CasinoCard } from "@/core/components/molecules/Casino_Cards";
+import { CasinoCard } from "@/core/components/organisms/Casino_Cards";
 
 const casinoCardData: CasinoCard[] = [
   {
