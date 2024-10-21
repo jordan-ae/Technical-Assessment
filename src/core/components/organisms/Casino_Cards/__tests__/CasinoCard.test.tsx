@@ -2,11 +2,12 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { CasinoCard } from '..'
+import Image, { ImageProps } from 'next/image'
 
 // Mock the dependencies
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: any) => <img {...props} />
+  default: (props: ImageProps) => <Image {...props} />
 }))
 
 jest.mock('next/link', () => ({
