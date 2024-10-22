@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { CasinoCard } from './index';
-import { JSX } from 'react';
 
 const meta = {
   title: "Casino Cards",

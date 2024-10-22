@@ -7,7 +7,7 @@ import Image, { ImageProps } from 'next/image'
 // Mock the dependencies
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: ImageProps) => <Image {...props} />
+  default: (props: ImageProps) => <Image {...props} alt='' />
 }))
 
 jest.mock('next/link', () => ({
