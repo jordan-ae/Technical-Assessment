@@ -4,7 +4,7 @@ const casinoCardData: CasinoCard[] = [
   {
     logo: "Logo_Grosvenor",
     casino_name: "Grosvenor Casinos",
-    rating: 4,
+    rating: 5,
     bonus: {
       betAmount: "£10",
       bonusAmount: "£400"
@@ -47,13 +47,13 @@ const casinoCardData: CasinoCard[] = [
 
 export default function Home() {
   return (
-    <main className="p-6 lg:p-10 min-h-screen flex flex-col items-start">
-        <h1 className="text-2xl font-bold text-primary-titles mb-3">
+    <main className="p-6 lg:p-10 min-h-screen  flex flex-col items-start">
+        <section aria-label="Casino List" className="w-full max-w-[min(100%,1148px)] mx-auto">
+        <h1 className="text-2xl w-full font-bold text-primary-titles mb-3">
           BEST CASINOS 2024
         </h1>
-        <section aria-label="Casino List" className="w-full">
           {casinoCardData.map((data, index) => (
-            <article key={index}>
+            <article className="flex flex-col items-center" key={index}>
               <CasinoCard data={data} />
             </article>
           ))}
